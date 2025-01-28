@@ -3,11 +3,11 @@ sequenceDiagram
     participant server
     
     browser->>browser: User types a note in the input field
-    browser-->>browser: User push button "Save"
+    browser-->>browser: User presses the "Save" button
     
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
-    server-->>browser: success
+    server-->>browser: success (note saved)
     deactivate server
     
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
@@ -17,7 +17,7 @@ sequenceDiagram
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
     activate server
-    server-->>browser: the css file
+    server-->>browser: the CSS file
     deactivate server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
@@ -29,7 +29,7 @@ sequenceDiagram
     
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
-    server-->>browser: Save note in Data
+    server-->>browser: Updated notes list (including the new note)
     deactivate server    
 
-    Note right of browser: The browser executes the callback function that renders the notes 
+    Note right of browser: The browser executes the callback function that renders the notes
