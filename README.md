@@ -59,7 +59,7 @@ The course emphasizes hands-on learning with real-world examples and practical e
 
 ## File structure:
 
-`
+```
 ├── part0/                  # Tasks from part 0
 │   ├── README.md           # Description of part 0 tasks
 │   └── task_0_1.md         # Description or code of the completed task
@@ -83,7 +83,8 @@ The course emphasizes hands-on learning with real-world examples and practical e
 │   ├── tests/              # Tests for the app
 │   └── README.md           # Description of part 4 tasks
 ├── LICENSE                 # License
-└── README.md               # Main repository description`
+└── README.md               # Main repository description
+```
 
 
 ## License
