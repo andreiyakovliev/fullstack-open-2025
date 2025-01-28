@@ -57,6 +57,33 @@ The course emphasizes hands-on learning with real-world examples and practical e
 - Basic knowledge of JavaScript, HTML, and CSS.
 - Familiarity with version control systems like Git.
 
+## File structure:
+
+├── part0/                  # Tasks from part 0
+│   ├── README.md           # Description of part 0 tasks
+│   └── task_0_1.md         # Description or code of the completed task
+├── part1/                  # Tasks from part 1
+│   ├── README.md           # Description of part 1 tasks
+│   ├── courseinfo/         # 'Courseinfo' app
+│   │   ├── src/            # React app code
+│   │   ├── package.json    # Project dependencies
+│   │   └── README.md       # App description
+│   └── ...                 # Other part 1 tasks
+├── part2/                  # Tasks from part 2
+│   ├── phonebook/          # 'Phonebook' app
+│   ├── countries/          # 'Countries' app
+│   └── README.md           # Description of part 2 tasks
+├── part3/                  # Tasks from part 3
+│   ├── backend/            # Node.js server for tasks
+│   ├── mongo/              # MongoDB scripts
+│   └── README.md           # Description of part 3 tasks
+├── part4/                  # Tasks from part 4
+│   ├── bloglist/           # 'Bloglist' app
+│   ├── tests/              # Tests for the app
+│   └── README.md           # Description of part 4 tasks
+├── LICENSE                 # License
+└── README.md               # Main repository description
+
 ## License
 This repository follows the MIT License. Feel free to use the code, but remember to give appropriate credit.
 
