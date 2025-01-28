@@ -1,3 +1,8 @@
+![Diagram](https://www.mermaidchart.com/raw/3e514a64-7908-49d7-a72e-ff52f9f32c52?theme=light&version=v0.1&format=svg)
+
+
+
+```
 sequenceDiagram
     participant browser
     participant server
@@ -33,3 +38,4 @@ sequenceDiagram
     deactivate server    
 
     Note right of browser: The browser executes the callback function that renders the notes
+```
