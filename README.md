@@ -60,9 +60,13 @@ The course emphasizes hands-on learning with real-world examples and practical e
 ## File structure:
 
 ```
-├── part0/                              # Tasks from part 0
-│   ├── README.md                       # Description of part 0 tasks
-│   └── task_0_4_new_note_diagram.md    # The completed task
+├── part0/                                               # Tasks from part 0
+│   ├── README.md                                        # Description of part 0 tasks
+│   └── task_0.4_new_note_diagram.md                     # The completed task
+│   └── task_0.5_single_page_app_diagram.md              # The completed task
+│   └── task_0.6_new_note_in_single_page_app_diagram.md  # The completed task
+part 1 tasks
+│   └── task_1.1-1.2_course_Information.md               # The completed task
 ```
 
 
