@@ -1,18 +1,74 @@
-# Fullstack Open 2025 - Part 1: Introduction to React
+# Full Stack Open 2025
 
-## Exercises 1.1 - 1.2
+This repository contains the exercises and project work completed as part of the **Full Stack Open 2025** course. The course is offered by the University of Helsinki and covers modern web application development with JavaScript.
 
-### 1.1: Course Information, step 1
-In this exercise, you will create a new React application using Vite. You will modify `main.jsx` and `App.jsx` to display course information such as the course name, parts, and the number of exercises for each part.
+## About the Course
+The course focuses on building full-stack web applications using the following technologies and tools:
 
-**Requirements:**
-- Create three components: `Header`, `Content`, and `Total`.
-  - `Header` renders the course name.
-  - `Content` renders the name and number of exercises for each part.
-  - `Total` renders the total number of exercises.
+- **Frontend:** React, Redux, HTML, CSS, JavaScript
+- **Backend:** Node.js, Express
+- **Database:** MongoDB
+- **Version Control:** Git, GitHub
+- **Testing:** Jest, Cypress
+- **Deployment:** Heroku, Fly.io
 
-### 1.2: Course Information, step 2
-Refactor the `Content` component so that it doesn't render part names and exercise counts directly. Instead, it should render three `Part` components, each of which will display the name and number of exercises for one part.
+The course emphasizes hands-on learning with real-world examples and practical exercises.
 
-**Structure:**
-- `App.jsx` should pass data to components using props.
+## Course Content
+1. **Introduction to React**  
+   Basics of React, components, state, and props.
+
+2. **Communicating with a Server**  
+   REST APIs, asynchronous JavaScript, and handling HTTP requests.
+
+3. **Programming a Server with Node.js and Express**  
+   Building a backend server, routing, and middleware.
+
+4. **Testing Express Applications**  
+   Writing unit and integration tests.
+
+5. **Frontend Development with React**  
+   Advanced React concepts, forms, and handling side effects.
+
+6. **State Management with Redux**  
+   Managing application state effectively.
+
+7. **Connecting Backend to a Database**  
+   Using MongoDB for data persistence.
+
+8. **User Administration**  
+   Authentication, authorization, and security.
+
+9. **Testing React Applications**  
+   End-to-end testing with Cypress.
+
+10. **Deploying an Application**  
+    Preparing and deploying applications to production.
+
+## How to Use this Repository
+1. Clone the repository to your local machine:
+   ```bash
+   git clone https://github.com/your-username/fullstack-open-2025.git
+   ```
+2. Navigate to the relevant exercise or project folder.
+3. Follow the README in each folder for instructions on running the code.
+
+## Prerequisites
+- Basic knowledge of JavaScript, HTML, and CSS.
+- Familiarity with version control systems like Git.
+
+## File structure:
+
+```
+├── part0/                              # Tasks from part 0
+│   ├── README.md                       # Description of part 0 tasks
+│   └── task_0_4_new_note_diagram.md    # The completed task
+```
+
+
+## License
+This repository follows the MIT License. Feel free to use the code, but remember to give appropriate credit.
+
+---
+
+For more details about the course, visit the official [Full Stack Open website](https://fullstackopen.com/en/).
