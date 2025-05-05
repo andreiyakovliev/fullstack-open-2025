@@ -25,7 +25,8 @@ task_1.4-1.11_unicafe
 ├── index.html  
 ├── package.json  
 ├── package-lock.json  
-└── vite.config.js  
+└── vite.config.js
+└── README.md  
 
 ### ✅ Tasks included
 - **1.6–1.7**: State management with `useState`

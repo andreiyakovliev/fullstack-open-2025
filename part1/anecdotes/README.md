@@ -25,7 +25,8 @@ task_1.12-1.14_anecdotes
 ├── index.html  
 ├── package.json  
 ├── package-lock.json  
-└── vite.config.js  
+└── vite.config.js
+└── README.md  
 
 ### ✅ Tasks included
 - **1.12**: Displaying a random anecdote

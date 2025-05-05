@@ -25,6 +25,7 @@ task_1.1-1.5_course_Information
 ├── package.json
 ├── package-lock.json
 └── vite.config.js
+└── README.md
 
 
 ### ✅ Tasks included
