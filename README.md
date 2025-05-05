@@ -66,7 +66,9 @@ The course emphasizes hands-on learning with real-world examples and practical e
 │   └── task_0.5_single_page_app_diagram.md              # The completed task
 │   └── task_0.6_new_note_in_single_page_app_diagram.md  # The completed task
 part 1 tasks
-│   └── task_1.1-1.2_course_Information.md               # The completed task
+│   └── task_1.1-1.5_course_Information.md               # The completed task
+│   └── task_1.6-1.11_unicafe.md                         # The completed task
+│   └── task_1.12-1.14_anecdotes.md                      # The completed task
 ```
 
 
