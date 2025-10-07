@@ -42,6 +42,10 @@ const App = () => {
       const person = persons[i];
 
       if (person.name === NewName) {
+        const confirmUpdate = window.confirm(`${NewName} is already added to phonebook, replace the old number with a new one?`);
+        if (!confirmUpdate) {
+          return;
+        }
         // alert(`${NewName} is already added to phonebook`);
         // return;
         const updatedPerson = { ...person, number: NewNumber }
@@ -52,8 +56,8 @@ const App = () => {
             setNewName('');
             setNewNumber('');
           })
+        return;
       }
-
     }
     personService
       .create(newObj)
