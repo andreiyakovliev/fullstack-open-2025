@@ -2,6 +2,7 @@ import { useState } from "react"
 import Filter from './components/Filter'
 import PersonForm from './components/PersonForm'
 import Person from './components/Person'
+import Notification from './components/Notification'
 import { useEffect } from "react";
 import personService from './services/persons'
 import axios from "axios";
@@ -13,6 +14,8 @@ const App = () => {
   const [NewName, setNewName] = useState('');
   const [NewNumber, setNewNumber] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
+  const [successMessage, setSuccessMessage] = useState(null);
+  const [errorMessage, setErrorMessage] = useState(null);
 
   useEffect(() => {
     personService
@@ -59,12 +62,18 @@ const App = () => {
         return;
       }
     }
+
     personService
       .create(newObj)
-      .then(returnedNote => {
-        setPersons(persons.concat(returnedNote))
+      .then(returnedContact => {
+        setPersons(persons.concat(returnedContact))
         setNewName('');
         setNewNumber('');
+        setSuccessMessage(`Added ${returnedContact.name}`);
+
+        setTimeout(() => {
+          setSuccessMessage(null)
+        }, 5000);
       })
   }
 
@@ -90,12 +99,21 @@ const App = () => {
           const updatedPersons = persons.filter((person) => person.id != id)
           setPersons(updatedPersons)
         })
+        .catch(error => {
+          setErrorMessage(`Information of ${contactName} has already been removed from server`)
+          setPersons(persons.filter(p => p.id !== id))
+          setTimeout(() => {
+            setErrorMessage(null)
+          }, 5000);
+        })
     }
   }
 
   return (
     <div>
       <h1>Phonebook</h1>
+      <Notification message={successMessage} type="success" />
+      <Notification message={errorMessage} type="error" />
       <Filter value={searchTerm} onChange={handleSearchChange} />
       <h2>Add a new</h2>
       <PersonForm

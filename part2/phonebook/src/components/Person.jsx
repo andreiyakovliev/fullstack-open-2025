@@ -1,6 +1,6 @@
 const Person = ({ person }) => {
 
-   return <li style={{ listStyleType: 'none', paddingLeft: 0 }}>{person.name} {person.number}</li>
+   return <div style={{ listStyleType: 'none', paddingLeft: 0 }}>{person.name} {person.number}</div>
 }
 
 export default Person
