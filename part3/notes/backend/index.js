@@ -7,6 +7,7 @@ const app = express()
 
 app.use(express.json())
 // app.use(requestLogger)
+app.use(express.static('dist'))
 
 const password = process.argv[2]
 
@@ -163,9 +164,6 @@ app.put('/api/notes/:id', (request, response, next) => {
         })
         .catch(error => next(error))
 })
-
-app.use(express.static('dist'))
-
 
 // обробки непідтримуваних маршрутів
 
