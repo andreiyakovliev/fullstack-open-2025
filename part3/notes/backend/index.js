@@ -5,7 +5,6 @@ import Note from './models/note.js'
 
 const app = express()
 
-app.use(express.static('dist'))
 app.use(express.json())
 // app.use(requestLogger)
 
@@ -66,7 +65,7 @@ app.get('/api/notes', (request, response) => {
         })
 })
 
-app.get('/api/notes/:id', (request, response) => {
+app.get('/api/notes/:id', (request, response, next) => {
     Note.findById(request.params.id)
         .then(note => {
             if (note) {
@@ -85,7 +84,7 @@ app.get('/api/notes/:id', (request, response) => {
 
 })
 
-app.delete('/api/notes/:id', (request, response) => {
+app.delete('/api/notes/:id', (request, response, next) => {
     // const id = request.params.id
     // notes = notes.filter(note => note.id !== id)
 
@@ -106,7 +105,7 @@ const generateId = () => {
     return String(maxId + 1)
 }
 
-app.post('/api/notes', (request, response) => {
+app.post('/api/notes', (request, response, next) => {
     const body = request.body
     console.log('Отримано body:', body);
     console.log('Type of body:', typeof body);
@@ -136,7 +135,9 @@ app.post('/api/notes', (request, response) => {
 
             response.json(savedNote);
         })
-    // response.json(note);
+        // response.json(note);
+
+        .catch(error => next(error))
 
 })
 
@@ -163,6 +164,9 @@ app.put('/api/notes/:id', (request, response, next) => {
         .catch(error => next(error))
 })
 
+app.use(express.static('dist'))
+
+
 // обробки непідтримуваних маршрутів
 
 const unknownEndpoint = (request, response) => {
@@ -178,6 +182,8 @@ const errorHandle = (error, request, response, next) => {
 
     if (error.name === 'CastError') {
         return response.status(400).send({ error: 'malformatted id' })
+    } else if (error.name === 'ValidationError') {
+        return response.status(400).json({ error: error.message })
     }
 
     next(error)
